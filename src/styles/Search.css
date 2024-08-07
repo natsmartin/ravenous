@@ -1,0 +1,60 @@
+.search-container, .search-button-container {
+    padding: 0.5rem;
+}
+
+.search-container {
+    background: url('https://media.licdn.com/dms/image/C5612AQHHt16E05nqJg/article-cover_image-shrink_720_1280/0/1521974112210?e=2147483647&v=beta&t=au4d01FlaBLWjqiXbptJOBaBekueTRMY8s5h2MaNJwQ') center/cover no-repeat border-box; 
+}
+.search-input {
+    border-radius: 12px;
+    padding: 0.5rem;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 25%;
+}
+
+#btn-search {
+    border-radius: 10px;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background-color: #ab7500;
+    border: 1px solid white;
+    transition: transform .5s;
+}
+
+#btn-search:hover {
+    cursor: pointer;
+    transform: scale(1.25);
+}
+
+#btn-search:active {
+    color: #ab7500;
+    background-color: white;
+    border: 1px solid #ab7500;
+}
+
+.sort-button {
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: unset;
+    padding: 5px;
+    margin: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.sort-button:hover {
+    cursor: pointer;
+}
+
+.sort-button:focus {
+    border: none;
+    color: #ffc23e;
+}
+
+.sort-container {
+    background-color: hsla(0, 0%, 0%, 0.416);
+    margin-bottom: 5px;
+}

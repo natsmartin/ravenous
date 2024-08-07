@@ -1,0 +1,55 @@
+.business-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.business-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.business-content > img {
+    object-fit: cover;
+    height: 300px;
+    width: 300px;
+}
+
+.business-content-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    line-height: 0.25rem;
+}
+
+.business-content-location {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    text-align: left;
+}
+
+.business-content-review {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    text-align: right;
+}
+
+.business-name-text {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+#category-title-text {
+    color: #ab7500;
+    font-weight: bold;
+}
+
+#rating-text {
+    color: #ab7500;
+    font-weight: bold;
+}
