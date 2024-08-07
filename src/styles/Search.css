@@ -50,8 +50,8 @@
 }
 
 .sort-button:focus {
-    border: none;
     color: #ffc23e;
+    border-bottom: 1px solid #ffc23e;
 }
 
 .sort-container {
