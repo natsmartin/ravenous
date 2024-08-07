@@ -18,7 +18,7 @@ function Business(props) {
         <div className='business-content-review'>
           <p id='category-title-text'>{business.categories[0].title.toUpperCase()}</p>
           <p id='rating-text'>{business.rating + ' stars'}</p>
-          <p id='review-count-text'>{business.review_count}</p>
+          <p id='review-count-text'>{business.review_count + ' reviews'}</p>
         </div>
       </div>
     </div>
