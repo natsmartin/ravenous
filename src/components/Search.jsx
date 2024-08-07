@@ -15,7 +15,8 @@ function Search() {
     const locationInput = document.getElementById('search-location').value
     setTerm(termInput)
     setLocation(locationInput)
-    setFilter(sortby.value)
+    setFilter(sortby)
+    onClick(sortby)
   }
 
   const active = {
@@ -37,9 +38,9 @@ function Search() {
   return (
     <div className='search-container'>
       <div className='sort-container'>
-        <button className='sort-button' style={filter === 'best_match' ? active : inActive} id='btn-best-match' value='best_match' onClick={(e) => onClickSort(e.target)}>Best Match</button>
-        <button className='sort-button' style={filter === 'rating' ? active : inActive} id='btn-highest-rated' value='rating' onClick={(e) => onClickSort(e.target)}>Highest Rated</button>
-        <button className='sort-button' style={filter === 'review_count' ? active : inActive} id='btn-most-reviewed' value='review_count' onClick={(e) => onClickSort(e.target)}>Most Reviewed</button>
+        <button className='sort-button' style={filter === 'best_match' ? active : inActive} id='btn-best-match' value='best_match' onClick={({target}) => onClickSort(target.value)}>Best Match</button>
+        <button className='sort-button' style={filter === 'rating' ? active : inActive} id='btn-highest-rated' value='rating' onClick={({target}) => onClickSort(target.value)}>Highest Rated</button>
+        <button className='sort-button' style={filter === 'review_count' ? active : inActive} id='btn-most-reviewed' value='review_count' onClick={({target}) => onClickSort(target.value)}>Most Reviewed</button>
       </div>
       <div className='input-container'>
         <input className='search-input' id="search-term" type='search' placeholder='Search' />
