@@ -11,8 +11,9 @@ function Search() {
   const [location, setLocation] = useState('')
 
   useEffect(() => {
-    onClick(filter)
-  }, [filter, term, location])
+    onClickSort(filter)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filter, term, location]);
 
   const onClickSort = (sortby) => {
     const termInput = document.getElementById('search-term').value
