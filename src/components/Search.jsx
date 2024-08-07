@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchBusinesses } from '../redux/slice/todo';
 import '../styles/Search.css';
@@ -9,6 +9,10 @@ function Search() {
   const [filter, setFilter] = useState('')
   const [term, setTerm] = useState('')
   const [location, setLocation] = useState('')
+
+  useEffect(() => {
+    onClick(filter)
+  }, [filter, term, location])
 
   const onClickSort = (sortby) => {
     const termInput = document.getElementById('search-term').value
@@ -31,7 +35,7 @@ function Search() {
 
 
   const onClick = (filter) => {
-    dispatch(fetchBusinesses({ term: term, location: location, sortby: filter }))
+    dispatch(fetchBusinesses({ term: term, location: location, sortby: filter ? filter : 'best_match' }))
     console.log(`Searching Yelp with ${term}, ${location}, ${filter}`)
   }
 
