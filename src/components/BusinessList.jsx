@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 function BusinessList() {
 
   const state = useSelector((state) => state);
-  console.log(state.todo);
+  // console.log(state.todo);
   const data = state.todo.data;
 
   if (state.todo.isLoading) {
