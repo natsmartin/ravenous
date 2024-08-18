@@ -30,12 +30,12 @@ function Search() {
 
   const active = {
     'color': '#ffc23e',
-    'border-bottom': '1px solid #ffc23e'
+    'borderBottom': '1px solid #ffc23e'
   }
 
   const inActive = {
     'color': 'white',
-    'border-bottom': '1px solid white'
+    'borderBottom': '1px solid white'
   }
 
 
@@ -43,7 +43,7 @@ function Search() {
     setState()
     if (term && location) {
       dispatch(fetchBusinesses({ term: term, location: location, sortby: filter ? filter : 'best_match' }))
-      console.log(`Searching Yelp with ${term}, ${location}, ${filter}`)
+      // console.log(`Searching Yelp with ${term}, ${location}, ${filter}`)
     }
   }
 
