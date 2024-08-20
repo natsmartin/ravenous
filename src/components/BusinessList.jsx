@@ -5,11 +5,11 @@ import { useSelector } from 'react-redux';
 
 function BusinessList() {
 
-  const state = useSelector((state) => state);
+  const state = useSelector((state) => state.todo);
   // console.log(state.todo);
-  const data = state.todo.data;
+  const data = state.data;
 
-  if (state.todo.isLoading) {
+  if (state.isLoading) {
     return (
       <p className="loading-text" >Loading . . .</p>
     )

@@ -1,7 +1,7 @@
 .business-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     padding: 2rem;
 }
 
@@ -10,10 +10,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 10px #888;
 }
 
-.business-content > img {
+.business-content>img {
     object-fit: cover;
     height: 300px;
     width: 300px;
@@ -52,4 +56,23 @@
 #rating-text {
     color: #ab7500;
     font-weight: bold;
+}
+
+@media only screen and (max-width : 768px) {
+    .business-container {
+        font-size: 12px;
+    }
+
+    .business-content>img {
+        width: 85%;
+        height: 85%;
+    }
+
+    .business-content-location, .business-content-review {
+        line-height: 1;
+    }
+
+    .business-name-text {
+        font-size: 14px;
+    }
 }
