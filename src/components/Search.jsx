@@ -55,7 +55,7 @@ function Search() {
         <button className='sort-button' style={filter === 'review_count' ? active : inActive} id='btn-most-reviewed' value='review_count' onClick={({ target }) => onClickSort(target.value)}>Most Reviewed</button>
       </div>
       <div className='input-container'>
-        <input className='search-input' id="search-term" type='search' placeholder='Search' />
+        <input className='search-input' id="search-term" type='search' placeholder='Search (e.g pizza)' />
         <input className='search-input' id="search-location" type='search' placeholder='Where' />
       </div>
       <div className='search-button-container'>
