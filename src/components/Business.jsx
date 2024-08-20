@@ -16,7 +16,7 @@ function Business(props) {
           <p>{business.location.state + ' ' + business.location.zip_code}</p>
         </div>
         <div className='business-content-review'>
-          <p id='category-title-text'>{business.categories[0].title.toUpperCase()}</p>
+          <p id='category-title-text'>{business.categories[0]?.title.toUpperCase()}</p>
           <p id='rating-text'>{business.rating + ' stars'}</p>
           <p id='review-count-text'>{business.review_count + ' reviews'}</p>
         </div>
