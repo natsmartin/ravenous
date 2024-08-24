@@ -11,11 +11,12 @@ function BusinessList() {
   const data = state.data;
   const [businessesData, setBusinessesData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(10);
+  const [postsPerPage, setPostsPerPage] = useState(0);
 
   useEffect(() => {
     if (data) {
       setBusinessesData(data.businesses)
+      setPostsPerPage(10)
     }
   }, [data, businessesData])
 
