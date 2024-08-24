@@ -1,0 +1,15 @@
+.pagination button.active {
+    background-color: #ffc23e;
+}
+
+.pagination button {
+    border-radius: 5px;
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.pagination {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}

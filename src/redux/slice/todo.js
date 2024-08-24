@@ -10,7 +10,7 @@ const options = {
 
 
 export const fetchBusinesses = createAsyncThunk('fetchBusinesses', async ({term, location, sortby}) => {
-    const response = await fetch(`https://api.yelp.com/v3/businesses/search?location=${location}&term=${term}&sort_by=${sortby}&limit=20`, options)
+    const response = await fetch(`https://api.yelp.com/v3/businesses/search?location=${location}&term=${term}&sort_by=${sortby}&limit=50`, options)
     const data = await response.json();
     return data;
 })
