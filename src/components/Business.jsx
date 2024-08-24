@@ -1,4 +1,3 @@
-import React from 'react'
 import '../styles/Business.css'
 
 function Business(props) {
