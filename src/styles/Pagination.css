@@ -9,6 +9,11 @@
     height: 50px;
 }
 
+.pagination button:hover {
+    cursor: pointer;
+    background-color: #ffc23eac;
+}
+
 .pagination {
     margin-top: 10px;
     margin-bottom: 50px;
