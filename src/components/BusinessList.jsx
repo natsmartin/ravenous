@@ -26,7 +26,9 @@ function BusinessList() {
 
   if (state.isLoading) {
     return (
-      <p className="loading-text" >Loading . . .</p>
+      <div className='loading-container'>
+        <div id="loading" ></div >
+      </div>
     )
   }
 

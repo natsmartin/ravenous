@@ -58,6 +58,31 @@
     font-weight: bold;
 }
 
+.loading-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+#loading {
+    border: 5px solid lightgray;
+    border-radius: 50%;
+    border-top: 5px solid #ab7500;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @media only screen and (max-width : 768px) {
     .business-container {
         font-size: 12px;
@@ -68,7 +93,8 @@
         height: 85%;
     }
 
-    .business-content-location, .business-content-review {
+    .business-content-location,
+    .business-content-review {
         line-height: 1;
     }
 
