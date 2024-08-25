@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchBusinesses } from '../redux/slice/todo';
 import '../styles/Search.css';
+import SortButton from './SortButton';
+import SearchInput from './SearchInput';
 
 function Search() {
 
@@ -17,11 +19,11 @@ function Search() {
     modal.style.display = 'none';
   }
 
-  const handleTermChange = ({target}) => {
-      setTerm(target.value)
+  const handleTermChange = ({ target }) => {
+    setTerm(target.value)
   }
 
-  const handleLocationChange = ({target}) => {
+  const handleLocationChange = ({ target }) => {
     setLocation(target.value)
   }
 
@@ -51,25 +53,18 @@ function Search() {
       </div>
 
       <div className='sort-container'>
-        <button className={filter === 'best_match' ? 'active' : ''}
-          id='btn-best-match' value='best_match'
-          onClick={({ target }) => onClickSort(target.value)}>Best Match</button>
-        <button className={filter === 'rating' ? 'active' : ''}
-          id='btn-highest-rated' value='rating'
-          onClick={({ target }) => onClickSort(target.value)}>Highest Rated</button>
-        <button className={filter === 'review_count' ? 'active' : ''}
-          id='btn-most-reviewed' value='review_count'
-          onClick={({ target }) => onClickSort(target.value)}>Most Reviewed</button>
+        <SortButton id='btn-best-match' value='best_match'
+          onClickSort={onClickSort} text='Best Match' />
+        <SortButton id='btn-highest-rated' value='rating'
+          onClickSort={onClickSort} text='Highest Rated' />
+        <SortButton id='btn-most-reviewed' value='review_count'
+          onClickSort={onClickSort} text='Most Reviewed' />
       </div>
       <div className='input-container'>
-        <input className='search-input'
-        onChange={handleTermChange}
-          id="search-term" type='search'
-          placeholder='Search (e.g pizza)' />
-        <input className='search-input'
-          onChange={handleLocationChange}
-          id="search-location" type='search'
-          placeholder='Where' />
+        <SearchInput id='search-term' placeholder='Search (e.g pizza)'
+          onChange={handleTermChange} />
+        <SearchInput id='search-location' placeholder='Where'
+          onChange={handleLocationChange} />
       </div>
       <div className='search-button-container'>
         <button id="btn-search" onClick={() => onClick(filter)}>Let's Go</button>
